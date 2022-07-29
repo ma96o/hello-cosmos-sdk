@@ -1,0 +1,14 @@
+syntax = "proto3";
+package hellocosmossdk.hellocosmossdk;
+
+import "gogoproto/gogo.proto";
+import "hellocosmossdk/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "hello-cosmos-sdk/x/hellocosmossdk/types";
+
+// GenesisState defines the hellocosmossdk module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
